@@ -4,19 +4,19 @@
 
 class Die {
 private:
-    int face;
+    int face; //주사위 면 표현
 
 public:
     Die() {
-        roll();
+        roll(); 
     }
 
     void roll() {
-        face = rand() % 6 + 1;
+        face = rand() % 6 + 1; //주사위를 굴려서 그 결과를 face에 설정
     }
 
     int getFace() const {
-        return face;
+        return face; //주사위 면 반환
     }
 };
 
