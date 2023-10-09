@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib> // rand() 함수를 사용하기 위한 헤더 파일
 #include <ctime>   // srand() 함수를 사용하기 위한 헤더 파일
+using namespace std;
 
 class Die {
 private:
@@ -8,7 +9,7 @@ private:
 
 public:
     Die() {
-        roll(); 
+        roll();
     }
 
     void roll() {
@@ -39,8 +40,8 @@ int main() {
 
     // 확률을 계산하여 출력합니다.
     double probability = static_cast<double>(count) / numThrows;
-    std::cout << "실험으로 얻은 확률: " << probability << std::endl;
-    std::cout << "수학적 확률(1/6): " << 1.0 / 6.0 << std::endl;
+    cout << "실험으로 얻은 확률: " << probability << endl;
+    cout << "수학적 확률(1/6): " << 1.0 / 6.0 << endl;
 
     return 0;
 }
