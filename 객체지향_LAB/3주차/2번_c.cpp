@@ -35,7 +35,7 @@ int main() {
     for (int i = 0; i < numThrows; ++i) {
         die1.roll();
         die2.roll();
-        int sum = die1.getFace() + die2.getFace();
+        int sum = die1.getFace() + die2.getFace();  // 두개를 동시에 던지기 때문에 더해준다 (중요) 
 
         if (sum == 12) {
             countSum12++;
