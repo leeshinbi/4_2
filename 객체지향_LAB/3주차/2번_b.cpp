@@ -30,7 +30,7 @@ int main() {
 
     Die myDie;
 
-    // 주사위를 1000번 던지고 3이 나올 때마다 count3를 증가시킵니다.
+    // 주사위를 1000번 던지고 3이 나올 때마다 count를 증가시킵니다.
     for (int i = 0; i < numThrows; ++i) {
         myDie.roll();
         if (myDie.getFace() == 3) {
