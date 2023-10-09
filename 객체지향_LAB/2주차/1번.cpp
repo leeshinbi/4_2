@@ -22,7 +22,7 @@ int main() {
    swap(a, b);
    cout << "a=" << a << "\tb=" << b << endl;
 
-   swap(a, b);
+   swap(&a, &b);
    cout << "a=" << a << "\tb=" << b << endl;
 
    return 0;
