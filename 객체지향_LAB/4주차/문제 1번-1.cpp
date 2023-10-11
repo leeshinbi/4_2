@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+using namespace std;
 
 const double PI = 3.14159265358979323846;
 
@@ -9,11 +10,11 @@ private:
 
 public:
     Circle(double r = 0.0) : radius(r) {
-        std::cout << "Circle with radius " << radius << " is created" << std::endl;
+        cout << "Circle with radius " << radius << " is created" << endl;
     }
 
     ~Circle() {
-        std::cout << "Circle with radius " << radius << " is dying" << std::endl;
+        cout << "Circle with radius " << radius << " is dying" << endl;
     }
 
     void setRadius(double r) {
@@ -26,11 +27,11 @@ public:
 
     void calcArea() {
         double area = PI * radius * radius;
-        std::cout << "Donut’s area: " << area << std::endl;
+        cout << "Donut’s area: " << area << endl;
     }
 
     void print() {
-        std::cout << "Donut’s size : " << radius << std::endl;
+        cout << "Donut’s size : " << radius << endl;
     }
 };
 
