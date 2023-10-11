@@ -7,31 +7,25 @@ const double PI = 3.14159265358979323846;
 class Circle {
 private:
     double radius;
-
 public:
     Circle(double r = 0.0) : radius(r) {
-        cout << "Circle with radius " << radius << " is created" << endl;
+        cout << "Circle with radius" << radius << "is created" << endl;
     }
-
     ~Circle() {
-        cout << "Circle with radius " << radius << " is dying" << endl;
+        cout << "Circle with radius" << radius << "is Dying" << endl;
     }
 
     void setRadius(double r) {
         radius = r;
     }
 
-    double getRadius() const {
-        return radius;
-    }
-
     void calcArea() {
         double area = PI * radius * radius;
-        cout << "Donut’s area: " << area << endl;
+        cout << "Donut's area" << area << endl;
     }
 
     void print() {
-        cout << "Donut’s size : " << radius << endl;
+        cout << "Donut's size" << radius << endl;
     }
 };
 
