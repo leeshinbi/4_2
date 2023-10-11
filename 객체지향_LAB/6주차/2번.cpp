@@ -52,13 +52,13 @@ int main() {
         r->setArea(calcArea(*r));
     }
 
-    for (Rec* rec : ar) {
+    for (Rec* rec : ar) { //e
         rec->display();
     }
     cout << "" << endl;
 
     cout << "After sorting:" << endl;
-    for (Rec* rec : ar) {   //e
+    for (Rec* rec : ar) {   
         rec->display();
     }
 
