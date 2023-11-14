@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class A {
@@ -19,8 +20,6 @@ public:
     }
 };
 
-
-
 class B : public A {
     int b;
 public:
@@ -40,11 +39,11 @@ public:
 };
 
 class C : public B {
-    int b;
+    int c;
 public:
     C() {
-        b = 0;
-        cout << "생성자 C : " << b << endl;
+        c = 0;
+        cout << "생성자 C : " << c << endl;
     }
     ~C() {
         cout << "소멸자 C : " << endl;
@@ -58,28 +57,26 @@ public:
 };
 
 int main() {
-    A a;
-    B b;
-    C c;
+    vector<A*> objects; // 벡터 생성
 
-    A* pa;
-    C* pc;
+    A* a = new A();
+    B* b = new B();
+    C* c = new C();
 
-    pa = &b;
-    cout << "1" << endl;
-    pa->f();         //(1)
-    cout << "2" << endl;
-    pa->v();         //(2)
+    objects.push_back(a);
+    objects.push_back(b);
+    objects.push_back(c);
 
-    pc = new C();
-    pa = pc;
-    cout << "3" << endl;
-    pa->f();         //(3)
-    cout << "4" << endl;
-    pa->v();         //(4)
-    cout << "5" << endl;
-    delete pa;         //(5)
-    cout << "ss" << endl;
+    // 벡터에 저장된 객체의 f() 및 v() 함수 호출
+    for (A* obj : objects) {
+        obj->f();
+        obj->v();
+    }
+
+    // 벡터에 저장된 객체의 메모리 해제
+    for (A* obj : objects) {
+        delete obj;
+    }
 
     return 0;
 }
